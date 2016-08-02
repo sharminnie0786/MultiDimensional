@@ -6,6 +6,10 @@
 //  Copyright © 2016 Sharmyn Kayani. All rights reserved.
 //
 //  30 columns, 15 rows
+// Notes: I am doing this question from the textbook questions you sent me. So far I have decided on what functions 
+// I will create and use. I am getting an error on line 40 (Thread 1: SIGNAL SIGBRT) and it does run successfully
+// But it stops at that function and doesn't proceed to the next function which is ticketSales. 
+// Why is this? Am i using the functions wrong?
 
 #include <iostream>
 using namespace std;
