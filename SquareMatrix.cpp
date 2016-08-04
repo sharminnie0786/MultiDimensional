@@ -39,3 +39,8 @@ int main() {
     
     return 0;
 }
+/* 
+ Umm Sharmyn this would result in displaying the middle row not the middle column ?
+ For the middle column you would do something like this
+ arr[i][newRow]
+*/
