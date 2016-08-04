@@ -11,5 +11,6 @@
 2 3        2 3    4 5         4 5
 4 5 6    4 5 6    6             6
 
+Hey if you open this readme file for editing only then you would be abe to see the structure of diagnols I am talking about ! Else it would be all gibberish !
 I hope you get the gist of what I am saying !
 This kind of stuff is really interesting like coming up with the logic part, enjoy doing it :D ! 
