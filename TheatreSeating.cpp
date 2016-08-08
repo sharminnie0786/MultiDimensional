@@ -6,17 +6,18 @@
 //  Copyright © 2016 Sharmyn Kayani. All rights reserved.
 //
 //  30 columns, 15 rows
-// NOT COMPLETE
+//
 
 #include <iostream>
 using namespace std;
 
-char answer, answer2;
+char answer;
 int row, column;
 int tickets = 0;
 float rowPrice = 10.00;
 float ticketPrice = 10.00;
 char seats[15][30];
+bool ticketYes = true;
 
 //Initialisng seating arrangement
 void seatingArrangement(){
@@ -72,12 +73,13 @@ void showArrangement() {
     
     cout << "Would you like to choose your seats? (Y/N): " << answer << endl;
     if (answer == 'Y' || answer == 'y') {
-        while (tickets > 0) {
+        while (tickets != 0) {
             cout << "Please choose seats from Row " << row << "." <<
             "(0 - 30)" << endl;
             cin >> column;
             //Makes chosen seats into '#'
             seats[row][column] = '#';
+            tickets = tickets - 1;
             
             for (int i = 0; i < 3; i++) {
                 for (int j = 0; j < 10; j++) {
@@ -106,6 +108,8 @@ void showArrangement() {
             }
             cout << endl;
         }
+        
+        
         } else if (answer == 'N' || answer == 'n') {
             cout << "Thankyou! Hope to see you soon." << endl;
         } else {
@@ -117,6 +121,8 @@ void showArrangement() {
 //Main Functions
 int main() {
 //    int seats[15][30];
+    
+    while (ticketYes == true) {
     seatingArrangement();
     ticketSales();
     
@@ -126,12 +132,15 @@ int main() {
         buyingTickets(tickets);
     } else if (answer == 'N' || answer == 'n') {
         cout << "Thankyou! Hope to see you soon." << endl;
+        ticketYes = false;
         return 0;
     } else {
         cout << "Answer not valid" << endl;
     }
 
     showArrangement();
+        
+    }
     
     return 0;
 }
